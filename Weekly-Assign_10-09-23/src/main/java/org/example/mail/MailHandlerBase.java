@@ -1,4 +1,6 @@
 package org.example.mail;
+import org.example.Billi;
+
 import javax.mail.Authenticator;
 import javax.mail.Message;
 import javax.mail.Session;
@@ -6,7 +8,7 @@ import javax.mail.Transport;
 import javax.mail.internet.InternetAddress;
 import javax.mail.internet.MimeMessage;
 import java.util.Properties;
-public class MailHandlerBase {
+public class MailHandlerBase extends Billi {
 
     public void sendMail() {
 
@@ -35,13 +37,16 @@ public class MailHandlerBase {
         //build the mail
         //Mime message
 
+
+
         MimeMessage mailMessage = new MimeMessage(mailSession);
 
         try {
             mailMessage.setFrom(MailConstants.SENDER);
-            mailMessage.setSubject("Geekster Mailing class");
+            mailMessage.setSubject("Weekly Assignment 10-09-2023");
             mailMessage.setRecipient(Message.RecipientType.TO, new InternetAddress("deepak76311@gmail.com"));
-            mailMessage.setText("Sending some data !!!");
+            mailMessage.setText("Billi ka color h :" + getColor().toString());
+
 
             Transport.send(mailMessage);
 

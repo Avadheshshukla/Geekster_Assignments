@@ -7,8 +7,7 @@ public class Billi {
     private String color;
 
     public Billi() {
-        this.color="brownwhite";
-        System.out.println("cat object create ..........");
+        this.color="Black";
     }
 
 //default  print
