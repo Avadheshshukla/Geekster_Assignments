@@ -34,9 +34,6 @@ public class MailHandlerBase extends Billi {
         Session mailSession = Session.getInstance(sysPropertiesMap, mailAuthenticator);
 
 
-        //build the mail
-        //Mime message
-
 
 
         MimeMessage mailMessage = new MimeMessage(mailSession);
