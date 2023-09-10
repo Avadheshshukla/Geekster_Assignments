@@ -8,7 +8,7 @@ import org.springframework.web.bind.annotation.RestController;
 public class ApiBilli {
     @Autowired
     Billi obj;
-    
+
     @GetMapping("billi1")
     public Billi getdata(){
         return obj;
